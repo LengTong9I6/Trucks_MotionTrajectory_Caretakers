@@ -1,5 +1,5 @@
 {
-    "name" : "Trucks_MotionTrajectory_Caretakers_项目代码",
+    "name" : "Trucks_MotionTrajectory_Caretakers",
     "appid" : "__UNI__40C77F1",
     "description" : "",
     "versionName" : "0.0.1",
@@ -52,7 +52,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "",
+        "appid" : "wx605460f36d1f9dbe",
         "setting" : {
             "urlCheck" : false
         },
