@@ -1,1 +1,1 @@
-<view class="content"><map class="map"></map></view>
+<view class="content"><view class="VievButton" id="mainMenu"><image class="VievButtonImg _img" src="/static/Vector.png" alt srcset></image></view><view class="radiusVievButton" id="myPosition"><image class="VievButtonImg _img" src="{{$root.m0}}" alt srcset></image></view><map class="map"></map></view>
