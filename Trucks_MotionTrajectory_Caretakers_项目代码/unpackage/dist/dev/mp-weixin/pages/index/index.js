@@ -147,7 +147,13 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -163,10 +169,16 @@ var _default =
 {
   name: 'TrucksMap',
   data: function data() {
-    return {};
+    return {
+      longitude: 113.790475,
+      latitude: 34.795507 };
 
-
-  } };exports.default = _default;
+  },
+  methods: {
+    move_to_location: function move_to_location() {
+      uni.createMapContext('Map').moveToLocation();
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 19 */

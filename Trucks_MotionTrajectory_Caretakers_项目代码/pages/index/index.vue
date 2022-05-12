@@ -3,21 +3,33 @@
 		<view class="VievButton" id="mainMenu">
 			<img class='VievButtonImg' src="/static/Vector.png" alt="" srcset="">
 		</view>
-		<view class="radiusVievButton" id="myPosition" @click="">
+		<view class="radiusVievButton" id="myPosition" @click="move_to_location()">
 			<img class='VievButtonImg' src="@/static/Crosshair.png" alt="" srcset="">
 		</view>
-		<map class="map"></map>
+		<map 
+		id="Map"
+		class="map"
+		:longitude="longitude"
+		:latitude="latitude"
+		:show-compass="true"
+		:show-location="true"
+		></map>
 	</view>
 </template>
-
 <script>
 	export default {
 		name: 'TrucksMap',
 		data() {
 			return {
-
+				longitude:113.790475,
+				latitude:34.795507
 			}
 		},
+		methods: {
+			move_to_location() {
+				uni.createMapContext('Map').moveToLocation()				
+			}
+		}
 	}
 </script>
 
