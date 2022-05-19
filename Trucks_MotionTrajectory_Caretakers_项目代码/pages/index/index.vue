@@ -1,11 +1,21 @@
 <template>
 	<view class="content">
-		<view class="VievButton" id="mainMenu">
+		<view class="VievButton" id="mainMenu" @click="showDrawer()">
 			<img class='VievButtonImg' src="/static/Vector.png" alt="" srcset="">
 		</view>
 		<view class="radiusVievButton" id="myPosition" @click="move_to_location()">
 			<img class='VievButtonImg' src="@/static/Crosshair.png" alt="" srcset="">
 		</view>
+		<uni-drawer 
+		ref="mainMenu_drawer" 
+		mode="left" 
+		:mask-click="true"
+		width="300"
+		>
+			<scroll-view style="height: 100%;" scroll-y="true">
+				
+			</scroll-view>
+		</uni-drawer>
 		<map 
 		id="Map"
 		class="map"
@@ -13,6 +23,7 @@
 		:latitude="latitude"
 		:show-compass="true"
 		:show-location="true"
+		@updated='move_to_location()'
 		></map>
 	</view>
 </template>
@@ -27,8 +38,14 @@
 		},
 		methods: {
 			move_to_location() {
-				uni.createMapContext('Map').moveToLocation()				
-			}
+				uni.createMapContext('Map').moveToLocation();			
+			},
+			showDrawer() {
+				this.$refs.mainMenu_drawer.open();
+			},
+			closeDrawer() {
+				this.$refs.mainMenu_drawer.close();
+			},
 		}
 	}
 </script>

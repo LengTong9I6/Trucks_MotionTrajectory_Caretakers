@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "卡卡看-alpha测试",
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-drawer": "/uni_modules/uni-drawer/components/uni-drawer/uni-drawer"
+  }
 }
