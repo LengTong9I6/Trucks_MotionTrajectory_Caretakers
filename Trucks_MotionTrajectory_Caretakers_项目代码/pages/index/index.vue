@@ -1,11 +1,14 @@
 <template>
 	<view class="content">
+		<!-- 按钮-左侧弹出菜单 -->
 		<view class="VievButton" id="mainMenu" @click="showDrawer()">
 			<img class='VievButtonImg' src="/static/Vector.png" alt="" srcset="">
 		</view>
+		<!-- 按钮-显示自己位置 -->
 		<view class="radiusVievButton" id="myPosition" @click="move_to_location()">
 			<img class='VievButtonImg' src="@/static/Crosshair.png" alt="" srcset="">
 		</view>
+		<!-- 窗口-左侧菜单 -->
 		<uni-drawer 
 		ref="mainMenu_drawer" 
 		mode="left" 
@@ -16,6 +19,7 @@
 				
 			</scroll-view>
 		</uni-drawer>
+		<!-- 组件-地图 -->
 		<map 
 		id="Map"
 		class="map"
